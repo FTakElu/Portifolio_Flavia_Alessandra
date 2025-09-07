@@ -1,21 +1,19 @@
-/* Importação da fonte do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
+/* ROOT */
 :root {
-    /* Paleta de cores inspirada na referência */
-    --background-color: #1a1a2e; /* Fundo mais escuro, quase preto */
-    --card-background: #252540; /* Fundo dos cards e elementos, um pouco mais claro que o background */
-    --text-color: #E0E0E0; /* Cor principal do texto */
-    --light-text-color: #AAAAAA; /* Cor de texto secundária */
+    --background-color: #1a1a2e;
+    --card-background: #252540;
+    --text-color: #E0E0E0;
+    --light-text-color: #AAAAAA;
 
-    --pink-accent: #FF69B4; /* Rosa Vibrante */
-    --green-accent: #39FF14; /* Verde Neon */
-    --blue-accent: #3498db; /* Azul */
-    --purple-accent: #8e44ad; /* Roxo */
-    --yellow-accent: #f1c40f; /* Amarelo */
-    --red-accent: #e74c3c; /* Vermelho */
+    --pink-accent: #FF69B4;
+    --green-accent: #39FF14;
+    --blue-accent: #3498db;
+    --purple-accent: #8e44ad;
+    --yellow-accent: #f1c40f;
+    --red-accent: #e74c3c;
 
-    /* Definição das cores para os itens de skill/projeto */
     --item-color-1: var(--pink-accent);
     --item-color-2: var(--green-accent);
     --item-color-3: var(--blue-accent);
@@ -24,28 +22,27 @@
     --item-color-6: var(--red-accent);
 }
 
+/* GLOBAL */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: 'Roboto Mono', monospace;
     transition: background-color 0.5s ease;
 }
-
 .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Header e Navegação */
+/* HEADER */
 .header {
-    background-color: rgba(0, 0, 0, 0.6); /* Mais escuro */
+    background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     position: fixed;
@@ -53,7 +50,7 @@ body {
     top: 0;
     z-index: 1000;
     padding: 15px 0;
-    border-bottom: 1px solid var(--pink-accent); /* Detalhe rosa */
+    border-bottom: 1px solid var(--pink-accent);
 }
 .header .container {
     display: flex;
@@ -62,7 +59,7 @@ body {
 }
 .logo {
     font-size: 1.5rem;
-    color: var(--pink-accent); /* Logo em rosa */
+    color: var(--pink-accent);
 }
 .nav a {
     color: var(--light-text-color);
@@ -71,18 +68,18 @@ body {
     transition: color 0.3s ease;
 }
 .nav a:hover {
-    color: var(--pink-accent); /* Hover em rosa */
+    color: var(--pink-accent);
 }
 
-/* Seções */
+/* SEÇÕES BASE */
 section {
     padding: 100px 0;
 }
 h2 {
     font-size: 2rem;
-    color: var(--pink-accent); /* Títulos em rosa */
+    color: var(--pink-accent);
     margin-bottom: 30px;
-    border-left: 4px solid var(--pink-accent); /* Bordas dos títulos em rosa */
+    border-left: 4px solid var(--pink-accent);
     padding-left: 10px;
 }
 ul.sub-list {
@@ -92,14 +89,13 @@ ul.sub-list {
     color: var(--light-text-color);
 }
 
-/* Seção Hero */
+/* HERO */
 .hero-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* Adiciona um gradiente sutil no fundo, inspirado na JetBrains */
     background: linear-gradient(135deg, var(--background-color) 0%, rgba(50, 20, 70, 0.4) 100%);
 }
 .hero-content {
@@ -107,7 +103,7 @@ ul.sub-list {
 }
 .greeting {
     font-size: 1.2rem;
-    color: var(--green-accent); /* Saudação em verde */
+    color: var(--green-accent);
 }
 .name {
     font-size: 4rem;
@@ -116,53 +112,53 @@ ul.sub-list {
 }
 .job-title {
     font-size: 1.5rem;
-    color: var(--blue-accent); /* Título do cargo em azul */
+    color: var(--blue-accent);
 }
 .cta-button {
     display: inline-block;
     margin-top: 30px;
     padding: 15px 30px;
     background-color: transparent;
-    border: 2px solid var(--pink-accent); /* Botão com borda rosa */
+    border: 2px solid var(--pink-accent);
     color: var(--pink-accent);
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 .cta-button:hover {
-    background-color: var(--pink-accent); /* Hover em rosa */
+    background-color: var(--pink-accent);
     color: var(--background-color);
 }
 
-/* Seção Sobre Mim */
+/* SOBRE */
 .about-content {
     font-size: 1.1rem;
     color: var(--text-color);
 }
 
-/* Seções de Habilidades, Experiência e Formação */
+/* SKILLS / EXPERIÊNCIA / FORMAÇÃO */
 .skills-grid, .experience-grid, .education-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustado para 280px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 .skill-item, .experience-item, .education-item {
-    background-color: var(--card-background); /* Fundo dos cards */
+    background-color: var(--card-background);
     padding: 20px;
-    border-radius: 8px; /* Bordas mais arredondadas */
-    border-left: 4px solid; /* A cor da borda será definida por JS ou CSS (veja abaixo) */
+    border-radius: 8px;
+    border-left: 4px solid;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 .skill-item:hover, .experience-item:hover, .education-item:hover {
-    transform: translateY(-8px); /* Efeito de elevação maior */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra ao passar o mouse */
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 .skill-name, .experience-item h3, .education-item h3 {
     font-size: 1.2rem;
     font-weight: bold;
-    color: var(--text-color); /* Títulos dos itens em cor de texto padrão */
+    color: var(--text-color);
     margin-bottom: 5px;
 }
 .experience-item p, .education-item p {
@@ -171,7 +167,7 @@ ul.sub-list {
     color: var(--light-text-color);
 }
 
-/* Cores das bordas para os itens (Alternando) */
+/* BORDAS COLORIDAS */
 .skills-grid > div:nth-child(1), .experience-grid > div:nth-child(1), .education-grid > div:nth-child(1) { border-left-color: var(--item-color-1); }
 .skills-grid > div:nth-child(2), .experience-grid > div:nth-child(2), .education-grid > div:nth-child(2) { border-left-color: var(--item-color-2); }
 .skills-grid > div:nth-child(3), .experience-grid > div:nth-child(3), .education-grid > div:nth-child(3) { border-left-color: var(--item-color-3); }
@@ -179,17 +175,17 @@ ul.sub-list {
 .skills-grid > div:nth-child(5), .experience-grid > div:nth-child(5), .education-grid > div:nth-child(5) { border-left-color: var(--item-color-5); }
 .skills-grid > div:nth-child(6), .experience-grid > div:nth-child(6), .education-grid > div:nth-child(6) { border-left-color: var(--item-color-6); }
 
-/* Seção de Projetos */
+/* PROJETOS */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 .project-card {
-    background-color: var(--card-background); /* Fundo dos cards */
+    background-color: var(--card-background);
     padding: 25px;
-    border-radius: 8px; /* Bordas mais arredondadas */
-    border-left: 4px solid; /* A cor da borda será definida por JS ou CSS (veja abaixo) */
+    border-radius: 8px;
+    border-left: 4px solid;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 .project-card:hover {
@@ -197,7 +193,7 @@ ul.sub-list {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 .project-card h3 {
-    color: var(--text-color); /* Título do projeto em cor de texto padrão */
+    color: var(--text-color);
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
@@ -207,16 +203,14 @@ ul.sub-list {
 .project-link {
     display: inline-block;
     margin-top: 15px;
-    color: var(--pink-accent); /* Link do projeto em rosa */
+    color: var(--pink-accent);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 .project-link:hover {
-    color: var(--green-accent); /* Hover para link do projeto em verde */
+    color: var(--green-accent);
 }
-
-/* Cores das bordas para os projetos (Alternando) */
 .projects-grid > div:nth-child(1) { border-left-color: var(--item-color-1); }
 .projects-grid > div:nth-child(2) { border-left-color: var(--item-color-2); }
 .projects-grid > div:nth-child(3) { border-left-color: var(--item-color-3); }
@@ -224,8 +218,7 @@ ul.sub-list {
 .projects-grid > div:nth-child(5) { border-left-color: var(--item-color-5); }
 .projects-grid > div:nth-child(6) { border-left-color: var(--item-color-6); }
 
-
-/* Seção de Contato */
+/* CONTATO */
 .contact-content {
     text-align: center;
 }
@@ -236,13 +229,13 @@ ul.sub-list {
 }
 .contact-link {
     font-size: 1.5rem;
-    color: var(--pink-accent); /* Email de contato em rosa */
+    color: var(--pink-accent);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 .contact-link:hover {
-    color: var(--green-accent); /* Hover em verde */
+    color: var(--green-accent);
 }
 .social-links {
     margin-top: 20px;
@@ -254,14 +247,16 @@ ul.sub-list {
     transition: color 0.3s ease;
 }
 .social-links a:hover {
-    color: var(--pink-accent); /* Hover dos links sociais em rosa */
+    color: var(--pink-accent);
 }
+
+/* IDIOMAS */
 .languages-content {
     margin-top: 40px;
     text-align: left;
 }
 .languages-content h3 {
-    border-bottom: 2px solid var(--pink-accent); /* Título de idiomas em rosa */
+    border-bottom: 2px solid var(--pink-accent);
     padding-bottom: 5px;
     margin-bottom: 15px;
     color: var(--pink-accent);
@@ -274,10 +269,10 @@ ul.sub-list {
     margin-bottom: 5px;
 }
 .languages-content strong {
-    color: var(--blue-accent); /* Destaque azul nos idiomas */
+    color: var(--blue-accent);
 }
 
-/* Footer */
+/* FOOTER */
 .footer {
     text-align: center;
     padding: 20px 0;
@@ -285,12 +280,13 @@ ul.sub-list {
     color: var(--light-text-color);
 }
 
-/* Animações */
+/* ANIMAÇÕES */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* RESPONSIVO */
 @media (max-width: 768px) {
     .header .container {
         flex-direction: column;
